@@ -7,23 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-sketch</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanalei&display=swap" rel="stylesheet">
+    <meta name="description"
+        content="Etch-a-sketch - Explore your creativity drawing on a webpage" />
 </head>
 
 <body>
     <header>
-        <h1>Etch-a-sketch</h1>
+        <h1 class="title">Etch-a-sketch</h1>
     </header>
     <div class="table">
         <div class="options">
-            <!-- TODO: Color picker -->
-            <!-- TODO: Create size picker -->
-            <button class="clearBtn" id="clearBtn">CLEAR</button>
+            <!-- <div class="color__picker">
+                <h2 class="subtitle">Select a color</h2>
+                <div class="color__picker--buttons">
+                    <button id="whiteBtn"" class="btn">White</button>
+                    <button id="blackBtn"" class="btn">Black</button>
+                    <button id="rainbowBtn"" class="btn">Rainbow</button>
+                    <button onclick="changeColor('custom')" class="btn">Custom</button>
+                </div>
+            </div> -->
+            <div class="size__picker">
+                <h2 class="subtitle">Select a size for the board</h2>
+                <div class="size__picker--buttons">
+                    <button onclick="createGrid(8,8)" class="btn sizeBtn">8x8</button>
+                    <button onclick="createGrid(16,16)" class="btn sizeBtn">16x16</button>
+                    <button onclick="createGrid(32,32)" class="btn sizeBtn">32x32</button>
+                    <button onclick="createGrid(64,64)" class="btn sizeBtn">64x64</button>
+                </div>
+            </div>
+            <button class="btn clearBtn" id="clearBtn">CLEAR</button>
         </div>
         <div class="container" id="container">
 
         </div>
     </div>
-    <footer>
+    <footer class="footer">
         <h2>Created by Felipe Layos - This project is part of The Odin Project Curriculum.</h2>
     </footer>
 </body>
